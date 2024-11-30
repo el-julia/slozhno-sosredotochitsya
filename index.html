@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-sheme" content="light dark" />
   <title>Сложно сосредоточиться</title>
   <link rel="icon" href="./images/favicon.ico" sizes="any" />
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
@@ -17,8 +18,9 @@
   <link rel="stylesheet" href="./styles/light.css" />
 </head>
 
-<body class="page">
+<body class="page theme_light">
   <header class="header decorated-zone">
+    <div class="rec" aria-hidden="true"></div>
     <nav class="header__theme-menu">
       <ul class="header__theme-menu-list">
         <li class="header__theme-menu-item">
@@ -39,15 +41,16 @@
         </li>
       </ul>
     </nav>
-    <h1 class="header__title content-section">no focus</h1>
+    <h1 class="header__title">no focus</h1>
     <p class="heading heading__title title-decor">Что делать, когда не можешь делать ничего<br> Или почему нам так
       сложно
       сконцентрироваться, особенно когда очень надо</p>
+    
   </header>
-  <section class="section">
+  <section class="section focus">
     <h2 class="heading__section heading">Почему сосредоточиться так сложно</h2>
-    <div class="content">
-      <article class="content__block">
+    <ul class="content">
+      <li class="content__block">
         <h3 class="heading title-decor heading-pink">Многозадачность</h3>
         <p class="part">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная
           многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её
@@ -55,8 +58,8 @@
           не существует. Исследователи выяснили, что мозгу тяжело концентрироваться даже на двух делах одновременно. А
           когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин —
           «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
-      </article>
-      <article class="content__block">
+      </li>
+      <li class="content__block">
         <h3 class="heading title-decor heading-pink">Дофамин</h3>
         <p class="part">С гормонами стресса всё понятно, но дальше — ещё интереснее. В нашей невозможности
           сосредоточиться
@@ -64,32 +67,32 @@
           Причём тут он? Мы часто отвлекаемся от важной задачи на что-то более «приятное» для мозгов. Например, смотрим
           лайки в соцсетях. В это время и выделяется дофамин — и мы чувствуем удовольствие. Получается замкнутый круг:
           чем больше отвлекаешься, тем больше удовольствия получаешь.</p>
-      </article>
-    </div>
+      </li>
+    </ul>
   </section>
 
-  <section class="section-attention">
-    <div class="title-attention">
-      <h2 class="heading__section-attention heading">Что снижает концентрацию внимания?</h2>
+  <section class="section attention">
+    <div class="attention__box">
+      <h2 class="heading__section heading">Что снижает концентрацию внимания?</h2>
     </div>
-    <div class="content-attention">
-      <article class="content__block">
+    <ul class="attention__list">
+      <li class="content__block">
         <h3 class="heading title-decor heading-pink">Многозадачность</h3>
         <p class="part">Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и резко
           меняющийся
           мир в целом) заставляет наш мозг постоянно «сканировать» окружающую среду на предмет опасности. Например,
           читать новости вместо работы. Но быть собранными всё время — невозможно. Концентрация — мышца, и она может не
           выдержать, если не давать ей отдохнуть.</p>
-      </article>
-      <article class="content__block">
+      </li>
+      <li class="content__block">
         <h3 class="heading title-decor heading-pink">Еда</h3>
         <p class="part">«Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно доставляют в мозг энергию и
           помогают
           ему лучше работать. Но уходит эта энергия также быстро, как и приходит. А мы в результате попадаем на
           «углеводные качели»: как только действие «быстрых углеводов» заканчивается, мы чувствуем усталость и
           сонливость. И хотим ещё больше быстрых углеводов.</p>
-      </article>
-      <article class="content__block">
+      </li>
+      <li class="content__block">
         <h3 class="heading title-decor heading-pink">Гаджеты</h3>
         <p class="part">Да-да, это та самая ситуация, когда на экране ноутбука — код, в наушниках — подкаст, а на
           компьютере
@@ -97,11 +100,11 @@
           просто не может. А чтобы вернуться к состоянию полной концентрации, человеку в среднем нужно 20 минут. Вот и
           получается, что чем больше времени мы проводим в гаджетах, тем больше времени затем нужно, чтобы вернуться к
           работе.</p>
-      </article>
-    </div>
+      </li>
+    </ul>
   </section>
 
-  <section class="fish">
+  <section class="section fish">
     <h2 class="heading__section heading">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
     </h2>
     <ul class="fish__list-items">
@@ -143,7 +146,7 @@
     </ul>
   </section>
 
-  <section class="gallery">
+  <section class="section gallery">
     <h3 class="heading title-decor heading-pink">А можно в картинках?</h3>
     <div class="gallery-img">
       <figure class="gallery__item">
@@ -164,9 +167,8 @@
     </div>
   </section>
 
-  <footer class="footer">
-    
-
+  <footer class="footer decorated-zone">
+    <h4 class="footer__title">focus</h4>
   </footer>
 
 

@@ -40,3 +40,8 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+/* сама написала */
+li {
+  list-style-type: none;
+}
