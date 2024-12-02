@@ -385,6 +385,7 @@ button {
 
   .content {
     grid-column: 2 / 4;
+    padding-inline-start: 5px;
   }
 
   .section {
@@ -406,12 +407,6 @@ button {
   .focus {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-  }
-
-  .content {
-    grid-column: 2;
-    grid-column: 2 / -1;
-    padding-inline-start: 5px;
   }
 
   /* focus 768*/
