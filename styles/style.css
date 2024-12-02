@@ -1,5 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-body > * {
+body>* {
   padding-inline: 10px;
 }
 
@@ -14,6 +14,7 @@ body > * {
   background-color: var(--bg-color, #000028);
   font-size: 18px;
 }
+
 .section {
   margin-block-start: 20px;
   margin-block-end: 50px;
@@ -24,7 +25,7 @@ body > * {
 }
 
 /* REC */
- .rec {
+.rec {
   position: absolute;
   top: 14px;
   right: 19px;
@@ -54,7 +55,8 @@ body > * {
   right: 0px;
   top: 1px;
   position: relative;
-} 
+}
+
 /* REC */
 
 /* менюшка */
@@ -157,6 +159,7 @@ button {
 .link:hover {
   border-bottom: 1px solid var(--main-text, #F1B2CE);
 }
+
 .link:focus {
   outline: none;
 }
@@ -164,6 +167,7 @@ button {
 .link:focus-visible {
   outline: 1px solid var(--main-text, #F1B2CE);
 }
+
 /* link */
 
 /*заголовки и текста блоков */
@@ -247,7 +251,7 @@ button {
 .content__block {
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
 }
 
 
@@ -287,7 +291,6 @@ button {
   width: 100%;
   overflow: hidden;
   margin: 0;
-  padding-block-end: 5px;
 }
 
 .gallery__image {
@@ -327,7 +330,7 @@ button {
 
 
 @media (min-width: 768px) {
-  body > * {
+  body>* {
     padding-inline: 20px;
   }
 
@@ -376,8 +379,10 @@ button {
   /* секции 768 */
 
   .heading__section {
-    margin-block-start: 10px;
+    grid-column: 1;
+    margin-block-start: 0px;
   }
+
   .content {
     grid-column: 2 / 4;
   }
@@ -394,7 +399,7 @@ button {
     margin-block-start: 0px;
     margin-block-end: 0px;
   }
-  
+
   /* секции 768 */
 
   /* focus 768*/
@@ -403,17 +408,12 @@ button {
     gap: 20px;
   }
 
-  .heading__section {
-    grid-column: 1;
-    margin-block-start: 0px;
-  }
-
   .content {
     grid-column: 2;
     grid-column: 2 / -1;
     padding-inline-start: 5px;
   }
-  
+
   /* focus 768*/
 
   /* attention 768 */
@@ -423,6 +423,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
   .attention .content {
     display: grid;
     grid-column: 1 / -1;
@@ -446,18 +447,13 @@ button {
     gap: 20px;
   }
 
-  .fish__list-items {
-    grid-column: 2;
-    grid-column: 2 / -1;
-  }
-
   /* fish 768 */
 
-   /* галерея 768 */
+  /* галерея 768 */
 
-   .gallery {
+  .gallery {
     gap: 20px;
-   }
+  }
 
   .gallery-img {
     display: grid;
@@ -490,6 +486,7 @@ button {
   .gallery__item:nth-child(5) {
     grid-area: street;
   }
+
   /* галерея 768 */
 
   /* footer 768 */
@@ -557,4 +554,3 @@ button {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
-
