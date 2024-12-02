@@ -29,7 +29,7 @@ body > * {
   top: 14px;
   right: 19px;
   gap: 5px;
-  display: none;
+  display: var(--rec-display);
   justify-content: center;
   align-items: center;
 }
@@ -43,10 +43,6 @@ body > * {
   content: 'REC';
 }
 
-body.theme_dark .rec {
-  display: flex;
-}
-
 .rec::after {
   content: '';
   width: 9px;
@@ -54,7 +50,7 @@ body.theme_dark .rec {
   background-color: var(--other, #FF0070);
   box-shadow: 0 0 4px 2px var(--other, #ff0070);
   border-radius: 50%;
-  margin-left: 5px;
+  margin-inline-end: 5px;
   right: 0px;
   top: 1px;
   position: relative;
@@ -93,8 +89,8 @@ body.theme_dark .rec {
 .header__theme-menu {
   align-self: end;
   justify-self: end;
-  padding-top: 77px;
-  padding-right: 10px;
+  padding-block-start: 77px;
+  padding-inline-end: 10px;
 }
 
 .header__title {
@@ -103,8 +99,8 @@ body.theme_dark .rec {
   text-shadow: 4px 4px 0 var(--shadow-title, #FF0070);
   color: var(--title, #DB00FF);
   align-self: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-inline-end: 10px;
+  padding-inline-start: 10px;
 }
 
 /* header */
@@ -148,7 +144,7 @@ button {
 }
 
 /* состояния кнопок */
-
+/* link */
 .line-break {
   display: block;
 }
@@ -168,6 +164,7 @@ button {
 .link:focus-visible {
   outline: 1px solid var(--main-text, #F1B2CE);
 }
+/* link */
 
 /*заголовки и текста блоков */
 
@@ -290,7 +287,7 @@ button {
   width: 100%;
   overflow: hidden;
   margin: 0;
-  padding-bottom: 5px;
+  padding-block-end: 5px;
 }
 
 .gallery__image {
@@ -341,9 +338,9 @@ button {
   }
 
   .header__theme-menu {
-    padding-right: 20px;
-    padding-top: 0px;
-    padding-bottom: 51px;
+    padding-inline-end: 20px;
+    padding-block-start: 0px;
+    padding-block-end: 51px;
   }
 
   .rec {
@@ -370,7 +367,7 @@ button {
   .heading__title {
     inline-size: 384px;
     padding-inline-end: 20px;
-    padding-top: 42px;
+    padding-block-start: 42px;
     align-self: auto;
     padding-inline-start: 0px;
   }
@@ -519,8 +516,8 @@ button {
   .header__theme-menu {
     justify-self: center;
     align-self: start;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding-inline-end: 0px;
+    padding-block-end: 0px;
   }
 
   .header__theme-menu-list {
@@ -529,7 +526,7 @@ button {
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-bottom: 15px;
+    padding-block-end: 15px;
   }
 
   .heading__title {
