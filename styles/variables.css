@@ -6,8 +6,8 @@
   --main-font: 'IBM Plex Mono';
   --bg-color: #000028;
   --pink: #FF0070;
-  --salmon:#F1B2CE;
-  --purple: #DB00FF;
+  --main-text:#F1B2CE;
+  --color-title: #DB00FF;
   --background-image: url(../images/cover-image.png);
 
 }

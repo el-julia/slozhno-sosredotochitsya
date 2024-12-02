@@ -1,4 +1,26 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+body > * {
+  padding-inline: 10px;
+}
+.line-break {
+  display: block;
+}
+
+.link {
+  text-shadow: 1px 1px 0 var(--pink, #FF0070);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--main-text, #F1B2CE);
+}
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--main-text, #F1B2CE);
+}
 
 .page {
   background-image: var(--background-image);
@@ -6,16 +28,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--salmon, #F1B2CE);
+  color: var(--main-text, #F1B2CE);
   font-family: var(--main-font, sans-serif);
   background-color: var(--bg-color, #000028);
-  padding-inline: 10px;
-
 }
 
 
 .section {
-  margin-block-start: 48px;
+  margin-block-start: 24px;
   margin-block-end: 50px; /* Убираем отступ сверху для последнего */
 }
 
@@ -27,10 +47,10 @@
 
  .rec {
   position: absolute;
-  top: 11px;
-  right: 9px;
+  top: 14px;
+  right: 19px;
   gap: 5px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -45,6 +65,10 @@
   content: 'REC';
 }
 
+body.theme_dark .rec {
+  display: flex;
+}
+
 
 .rec::after {
   content: '';
@@ -54,10 +78,16 @@
   box-shadow: 0 0 4px 2px var(--pink, #ff0070);
   border-radius: 50%;
   margin-left: 5px;
-  right: 1px;
+  right: 0px;
   top: 1px;
   position: relative;
 } 
+
+/* .theme_light .rec {
+  display: none; /* Скрываем элемент в светлой теме 
+  opacity: 0;
+
+} */
 
 /* REC */
 /* менюшка */
@@ -74,6 +104,7 @@
 
 
 }
+
 
 .header__theme-menu-item {
   color: var(--pink, #FF0070);
@@ -96,25 +127,34 @@
 .header {
   padding-block-start: 73px;
   display: grid;
+  gap: 61px;
   grid-template-rows: min-content min-content min-content;
   grid-template-columns: 1fr;
   position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  max-width: 1440px;
 }
 
 
 .header__theme-menu {
   align-self: end;
   justify-self: end;
+  padding-top: 77px;
+  padding-right: 10px;
 }
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  margin-block-start: 21vh; /*вопрос сереже */
-  margin-block-end: 5vh; /*вопрос сереже */
+  /* margin-block-start: 67px;
+  margin-block-end: 13px; */
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--pink, #FF0070);
-  color: var(--purple, #DB00FF);
+  color: var(--color-title, #DB00FF);
   align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
 
 }
 
@@ -136,6 +176,8 @@ button {
   border: none;
 }
 
+/* состояния кнопок */
+
 .header__theme-menu-button:focus {
   outline: none;
 }
@@ -145,13 +187,15 @@ button {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--pink);
+  outline: 1px solid rgba(255, 0, 112, 0.4);
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--pink);
   pointer-events: none;
 }
+
+/* состояния кнопок */
 
 
 /*заголовки и текста блоков */
@@ -163,10 +207,13 @@ button {
 
 
 .heading__title {
-  margin-block-end: 18vh; /*вопрос сереже */
+  
   align-self: end;
   justify-self: end;
-  margin-block-start: 40px;
+  margin-inline-end: 10px;
+  margin-inline-start: 10px;
+  /* margin-block-start: 40px;
+  margin-block-end: 58px; */
 }
 
 
@@ -175,6 +222,7 @@ button {
   line-height: 130%;
   text-align: left;
   font-size: 18px;
+  color: var(--bg-color);
 }
 
 .heading-secondary {
@@ -187,25 +235,24 @@ button {
 .decorated-zone::before,
 .decorated-zone::after {
   content: '';
-  padding-block-start: 2%;
   position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
+  width: 25px;
+  height: 25px;
   background-color: transparent;
 
 }
 
 .decorated-zone::before {
-  top: 10px;
-  right: 0;
+  top: 13px;
+  right: 10px;
   border-top: 1px solid var(--pink, #FF0070);
   border-right: 1px solid var(--pink, #FF0070);
 
 }
 
 .decorated-zone::after {
-  bottom: 0;
-  left: 0;
+  bottom: 27px;
+  left: 10px;
   border-bottom: 1px solid var(--pink);
   border-left: 1px solid var(--pink);
 
@@ -269,16 +316,6 @@ button {
 }
 
 
-@media (min-width: 1024px) {
-
-  .attention__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column: 1 / -1;
-    gap: 20px;
-
-  }
-}
 
 /* блок с золотой рыбкой */
 
@@ -314,6 +351,10 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
 }
 
 .footer__title {
@@ -322,19 +363,8 @@ button {
   margin-block-end: 275px;
   margin-block-start: 286px;
   line-height: 83%;
-  color: var(--purple, #DB00FF);
+  color: var(--color-title, #DB00FF);
   text-align: center;
-}
-
-@midia (min-width: 768px) and (max-width: 1024px) {
-  
-}
-
-@media (min-width: 1024px) {
-  .footer__title {
-    margin-block-end: 15vh;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
 }
 
 /* подвал */
@@ -343,37 +373,48 @@ button {
 
 
 @media (min-width: 768px) {
-
-  /* page 768 */
-  .page {
-  padding-inline: 20px;
+  body > * {
+    padding-inline: 20px;
   }
+  /* page 768 */
+
 
   /* page 768 */
   /* header 768 */
 
   .header {
     padding-block-start: 192px;
+    gap: 168px;
   }
 
+  .header__theme-menu {
+    padding-right: 20px;
+  }
   .rec {
     position: absolute;
     top: 19px;
     right: 9px;
   }
   .decorated-zone::before {
-    top: 19px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
   }
 
   .header__title {
-    margin-block-start: 55vh;
-    margin-block-end: 38vh;
+    /* margin-block-start: 173px;
+    margin-block-end: 120px; */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .heading__title {
-    margin-block-end: 51vh;
+    /* margin-block-end: 164px; */
     inline-size: 364px;
+    margin-inline-end: 20px;
   }
 
   /* header 768 */
@@ -397,8 +438,6 @@ button {
     margin-block-end: 0px;
   }
   
-  
-
   /* секции 768 */
 
   /* focus 768*/
@@ -433,7 +472,6 @@ button {
     display: grid;
     grid-column: 1 / -1;
     padding: 0;
-
   }
 
   .attention__box {
@@ -502,31 +540,66 @@ button {
   /* footer 768 */
 
   .footer__title {
-    margin-block-start: 146vh;
-    margin-block-end: 139vh;
+    margin-block-start: 462px;
+    margin-block-end: 440px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
 }
 
 
-
+/* 1024 */
 
 @media (min-width: 1024px) {
+
+  /* header 1024 */
+
+  .header {
+    padding-block-start: 20px;
+    gap: 0px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title {
+    padding-block-start: 274px;
+    padding-block-end: 111px;
+    /* margin-block-start: 86vh;
+    margin-block-end: 23vh; */
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .heading__title {
-    margin-block-end: 12vh;
+    /* margin-block-end: 36vh; */
     inline-size: 491px;
   }
-}
 
+  /* header 1024 */
+  .attention .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+  .attention__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
+    gap: 20px;
 
-@midia (min-width: 768px) and (max-width: 1024px) {
-  
-}
+  }
 
-@media (min-width: 1024px) {
-  .header__title {
+  .footer__title {
     margin-block-end: 15vh;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
+ 
 }
+

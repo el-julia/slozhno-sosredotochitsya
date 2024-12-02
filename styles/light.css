@@ -10,20 +10,20 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --main-font: 'IBM Plex Mono';
-  --bg-color: #ffff;
+  --bg-color: #353430;
   --pink: #FF8DCB;
-  --salmon: #353430;
-  --purple: #FFC2E6;
+  --main-text: #353430;
+  --color-title: #FFC2E6;
   --background-image: url(../images/cover-image-light.png);
 }
 
 :root.theme-light {
   /* Переменные светлой темы */
   --main-font: 'IBM Plex Mono';
-  --bg-color: #ffff;
+  --bg-color: #353430;
   --pink: #FF8DCB;
-  --salmon: #353430;
-  --purple: #FFC2E6;
+  --main-text: #353430;
+  --color-title: #FFC2E6;
   --background-image: url(../images/cover-image-light.png);
 
 }
@@ -34,13 +34,17 @@
 @media (prefers-color-scheme: light) {
   :root {
     --main-font: 'IBM Plex Mono';
-    --bg-color: #ffff;
+    --bg-color: #353430;
     --pink: #FF8DCB;
-    --salmon: #353430;
-    --purple: #FFC2E6;
+    --main-text: #353430;
+    --color-title: #FFC2E6;
     --background-image: url(../images/cover-image-light.png);
     /* Дублируем переменные светлой темы */
   }
 }
+.theme_light .rec {
+  display: none; /* Скрываем элемент в светлой теме */
+  opacity: 0;
 
+}
 /* Остальные стили */
