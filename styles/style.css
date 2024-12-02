@@ -2,12 +2,159 @@
 body > * {
   padding-inline: 10px;
 }
+
+.page {
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--main-text, #F1B2CE);
+  font-family: var(--main-font, sans-serif);
+  background-color: var(--bg-color, #000028);
+  font-size: 18px;
+}
+.section {
+  margin-block-start: 20px;
+  margin-block-end: 50px;
+}
+
+.section:last-of-type {
+  margin-block-end: 32px;
+}
+
+/* REC */
+ .rec {
+  position: absolute;
+  top: 14px;
+  right: 19px;
+  gap: 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.rec::before {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 400;
+  color: var(--other, #FF0070);
+  text-transform: uppercase;
+  z-index: 10;
+  content: 'REC';
+}
+
+body.theme_dark .rec {
+  display: flex;
+}
+
+.rec::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  background-color: var(--other, #FF0070);
+  box-shadow: 0 0 4px 2px var(--other, #ff0070);
+  border-radius: 50%;
+  margin-left: 5px;
+  right: 0px;
+  top: 1px;
+  position: relative;
+} 
+/* REC */
+
+/* менюшка */
+
+.header__theme-menu-item {
+  color: var(--other, #FF0070);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* менюшка */
+
+
+/* header */
+
+.header {
+  display: grid;
+  gap: 60px;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: 1fr;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  max-width: 1440px;
+}
+
+.header__theme-menu {
+  align-self: end;
+  justify-self: end;
+  padding-top: 77px;
+  padding-right: 10px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--shadow-title, #FF0070);
+  color: var(--title, #DB00FF);
+  align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* header */
+
+button {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: lowercase;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  width: 70px;
+  height: 26px;
+}
+
+
+/* состояния кнопок */
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--other, #FF0070);
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--other, #FF0070);
+  pointer-events: none;
+}
+
+/* состояния кнопок */
+
 .line-break {
   display: block;
 }
 
 .link {
-  text-shadow: 1px 1px 0 var(--pink, #FF0070);
+  text-shadow: 1px 1px 0 var(--pink-background, #FF0070);
   text-decoration: none;
 }
 
@@ -22,214 +169,34 @@ body > * {
   outline: 1px solid var(--main-text, #F1B2CE);
 }
 
-.page {
-  background-image: var(--background-image);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: var(--main-text, #F1B2CE);
-  font-family: var(--main-font, sans-serif);
-  background-color: var(--bg-color, #000028);
-}
-
-
-.section {
-  margin-block-start: 20px;
-  margin-block-end: 50px; /* Убираем отступ сверху для последнего */
-}
-
-.section:last-of-type {
-  margin-block-end: 32px; /* Отступ снизу только для последнего */
-}
-
-/* REC */
-
- .rec {
-  position: absolute;
-  top: 14px;
-  right: 19px;
-  gap: 5px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.rec::before {
-  font-family: 'IBM Plex Mono', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--pink, #FF0070);
-  text-transform: uppercase;
-  z-index: 10;
-  content: 'REC';
-}
-
-body.theme_dark .rec {
-  display: flex;
-}
-
-
-.rec::after {
-  content: '';
-  width: 9px;
-  height: 9px;
-  background-color: var(--pink, #FF0070);
-  box-shadow: 0 0 4px 2px var(--pink, #ff0070);
-  border-radius: 50%;
-  margin-left: 5px;
-  right: 0px;
-  top: 1px;
-  position: relative;
-} 
-
-/* .theme_light .rec {
-  display: none; /* Скрываем элемент в светлой теме 
-  opacity: 0;
-
-} */
-
-/* REC */
-/* менюшка */
-
-.header__theme-menu-button {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  width: 70px;
-  height: 26px;
-}
-
-.header__theme-menu-button_type_dark {
-
-
-}
-
-
-.header__theme-menu-item {
-  color: var(--pink, #FF0070);
-  font-size: 18px;
-}
-
-.header__theme-menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-
-
-/* менюшка */
-
-
-/* header */
-
-.header {
-  /* padding-block-start: 73px; */
-  display: grid;
-  gap: 60px;
-  grid-template-rows: min-content min-content min-content;
-  grid-template-columns: 1fr;
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  padding: 0;
-  max-width: 1440px;
-}
-
-
-.header__theme-menu {
-  align-self: end;
-  justify-self: end;
-  padding-top: 77px;
-  padding-right: 10px;
-}
-
-.header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  /* margin-block-start: 67px;
-  margin-block-end: 13px; */
-  line-height: 83%;
-  text-shadow: 4px 4px 0 var(--pink, #FF0070);
-  color: var(--color-title, #DB00FF);
-  align-self: center;
-  padding-left: 10px;
-  padding-right: 10px;
-
-}
-
-
-
-/* header */
-
-
-button {
-  background: transparent;
-  border-radius: 0;
-}
-
-.header__theme-menu-button {
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: lowercase;
-  text-align: center;
-  border: none;
-}
-
-/* состояния кнопок */
-
-.header__theme-menu-button:focus {
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--pink);
-}
-
-.header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
-}
-
-.header__theme-menu-button_active {
-  outline: 1px solid var(--pink);
-  pointer-events: none;
-}
-
-/* состояния кнопок */
-
-
 /*заголовки и текста блоков */
 
 .title-decor {
-  background-color: var(--pink, #FF0070);
-  color: var(--bg-color, #000028);
+  background-color: var(--pink-background, #FF0070);
+  color: var(--text-in-pink, #000028);
 }
 
 
 .heading__title {
-  
   align-self: end;
   justify-self: end;
   padding-inline-end: 10px;
   padding-inline-start: 10px;
-  /* margin-block-start: 40px;
-  margin-block-end: 58px; */
 }
-
 
 .heading {
   font-weight: 700;
   line-height: 130%;
   text-align: left;
   font-size: 18px;
-  color: var(--bg-color);
+  color: var(--text-in-pink, #000028);
 }
 
 .heading-secondary {
   font-weight: 400;
   line-height: 130%;
   text-align: left;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .decorated-zone::before,
@@ -239,42 +206,33 @@ button {
   width: 25px;
   height: 25px;
   background-color: transparent;
-
 }
 
 .decorated-zone::before {
   top: 13px;
   right: 10px;
-  border-top: 1px solid var(--pink, #FF0070);
-  border-right: 1px solid var(--pink, #FF0070);
-
+  border-top: 1px solid var(--other, #FF0070);
+  border-right: 1px solid var(--other, #FF0070);
 }
 
 .decorated-zone::after {
   bottom: 27px;
   left: 10px;
-  border-bottom: 1px solid var(--pink);
-  border-left: 1px solid var(--pink);
-
+  border-bottom: 1px solid var(--other, #FF0070);
+  border-left: 1px solid var(--other, #FF0070);
 }
 
 .heading__section {
-  color: var(--pink, #FF0070);
+  color: var(--other, #FF0070);
 }
 
-
-.heading-pink {
-
-}
 
 /*заголовки и текста блоков */
 
 
 .part {
   font-weight: 400;
-  font-size: 18px;
   line-height: 130%;
-  /*тут надо дописать чтобы у послденего не применялось */
 }
 
 .focus {
@@ -309,13 +267,13 @@ button {
   gap: 20px;
 }
 
+/* блок с золотой рыбкой */
+
 .fish {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
-
-
 
 /* блок с золотой рыбкой */
 
@@ -327,7 +285,6 @@ button {
   grid-template-columns: 1fr;
   gap: 10px;
 }
-
 
 .gallery__item {
   width: 100%;
@@ -361,7 +318,8 @@ button {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
-  color: var(--color-title, #DB00FF);
+  color: var(--title, #DB00FF);
+  text-shadow: 3px 3px 0 var(--shadow-title, #FF0070);
   justify-self: center;
   align-self: center;
 }
@@ -375,16 +333,11 @@ button {
   body > * {
     padding-inline: 20px;
   }
-  /* page 768 */
 
-
-  /* page 768 */
   /* header 768 */
-
   .header {
     gap: 0px;
     grid-template-rows: 1fr 1fr 1fr;
-
   }
 
   .header__theme-menu {
@@ -392,11 +345,13 @@ button {
     padding-top: 0px;
     padding-bottom: 51px;
   }
+
   .rec {
     position: absolute;
     top: 19px;
     right: 30px;
   }
+
   .decorated-zone::before {
     top: 20px;
     right: 20px;
@@ -408,14 +363,11 @@ button {
   }
 
   .header__title {
-    /* margin-block-start: 173px;
-    margin-block-end: 120px; */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-left: 0;
   }
 
   .heading__title {
-    /* margin-block-end: 164px; */
     inline-size: 384px;
     padding-inline-end: 20px;
     padding-top: 42px;
@@ -426,19 +378,12 @@ button {
   /* header 768 */
   /* секции 768 */
 
-  .heading__section:first-of-type {
-  }
   .heading__section {
     margin-block-start: 10px;
   }
   .content {
     grid-column: 2 / 4;
   }
-  /* .section {
-    margin-block-start: 80px;
-    margin-block-end: 0px;
-  } */
- 
 
   .section {
     margin-block-start: 80px;
@@ -459,13 +404,11 @@ button {
   .focus {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-
   }
 
   .heading__section {
     grid-column: 1;
     margin-block-start: 0px;
-
   }
 
   .content {
@@ -585,14 +528,11 @@ button {
   }
 
   .header__title {
-    /* margin-block-start: 86vh;
-    margin-block-end: 23vh; */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-bottom: 15px;
   }
 
   .heading__title {
-    /* margin-block-end: 36vh; */
     inline-size: 512px;
   }
 
@@ -608,18 +548,16 @@ button {
     grid-column: 1 / -1;
     padding: 0;
   }
+
   .attention__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1 / -1;
     gap: 20px;
-
   }
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
- 
 }
 

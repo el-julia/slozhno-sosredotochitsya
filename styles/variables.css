@@ -4,10 +4,12 @@
 */
 :root {
   --main-font: 'IBM Plex Mono';
-  --bg-color: #000028;
-  --pink: #FF0070;
-  --main-text:#F1B2CE;
-  --color-title: #DB00FF;
   --background-image: url(../images/cover-image.png);
-
+  --text-in-pink: #000028; /* -- заменится на 353430 */
+  --pink-background: #FF0070; /*--заменится на FF8DCB*/
+  --main-text: #F1B2CE; /*заменится на 353430*/
+  --other: #FF0070; /*заменится на 353430*/
+  --title: #DB00FF; /*заменится на FFC2E6*/
+  --shadow-title: #FF0070; /*не поменяется */
+  --hover: rgba(255, 0, 112, 0.4);
 }

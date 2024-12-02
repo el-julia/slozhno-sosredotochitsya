@@ -10,20 +10,26 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --main-font: 'IBM Plex Mono';
-  --bg-color: #000028;
-  --pink: #FF0070;
-  --main-text:#F1B2CE;
-  --color-title: #DB00FF; 
   --background-image: url(../images/cover-image-dark.png);
+  --text-in-pink: #000028;
+  --pink-background: #FF0070;
+  --main-text: #F1B2CE;
+  --other: #FF0070;
+  --title: #DB00FF;
+  --shadow-title: #FF0070;
+  --hover: rgba(255, 0, 112, 0.4);
 }
 
 :root.theme-dark {
   /* Дублируем переменные для тёмной темы */
   
   --main-font: 'IBM Plex Mono';
-  --bg-color: #000028;
-  --pink: #FF0070;
-  --main-text:#F1B2CE;
-  --color-title: #DB00FF; 
   --background-image: url(../images/cover-image-dark.png);
+  --text-in-pink: #000028;
+  --pink-background: #FF0070;
+  --main-text: #F1B2CE;
+  --other: #FF0070;
+  --title: #DB00FF;
+  --shadow-title: #FF0070;
+  --hover: rgba(255, 0, 112, 0.4);
 }

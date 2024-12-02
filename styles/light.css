@@ -10,22 +10,26 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --main-font: 'IBM Plex Mono';
-  --bg-color: #353430;
-  --pink: #FF8DCB;
-  --main-text: #353430;
-  --color-title: #FFC2E6;
   --background-image: url(../images/cover-image-light.png);
+  --text-in-pink: #353430; 
+  --pink-background: #FF8DCB;
+  --main-text: #353430; 
+  --other: #353430;
+  --title: #FFC2E6;
+  --shadow-title: #FF0070;
+  --hover: rgba(50, 49, 45, 0.4);
 }
 
-:root.theme-light {
-  /* Переменные светлой темы */
+ :root.theme-light {
   --main-font: 'IBM Plex Mono';
-  --bg-color: #353430;
-  --pink: #FF8DCB;
-  --main-text: #353430;
-  --color-title: #FFC2E6;
   --background-image: url(../images/cover-image-light.png);
-
+  --text-in-pink: #353430; 
+  --pink-background: #FF8DCB;
+  --main-text: #353430; 
+  --other: #353430;
+  --title: #FFC2E6;
+  --shadow-title: #FF0070;
+  --hover: rgba(50, 49, 45, 0.4);
 }
 
 
@@ -34,17 +38,19 @@
 @media (prefers-color-scheme: light) {
   :root {
     --main-font: 'IBM Plex Mono';
-    --bg-color: #353430;
-    --pink: #FF8DCB;
-    --main-text: #353430;
-    --color-title: #FFC2E6;
     --background-image: url(../images/cover-image-light.png);
+    --text-in-pink: #353430; 
+    --pink-background: #FF8DCB;
+    --main-text: #353430; 
+    --other: #353430;
+    --title: #FFC2E6;
+    --shadow-title: #FF0070;
+    --hover: rgba(50, 49, 45, 0.4);
     /* Дублируем переменные светлой темы */
   }
 }
 .theme_light .rec {
-  display: none; /* Скрываем элемент в светлой теме */
+  display: none;
   opacity: 0;
 
 }
-/* Остальные стили */
