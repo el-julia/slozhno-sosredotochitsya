@@ -1,6 +1,7 @@
 .page.theme_dark {
   --main-font: 'IBM Plex Mono';
   --background-image: url(../images/cover-image-dark.png);
+  --background-color: #000028;
   --text-in-pink: #000028;
   --pink-background: #FF0070;
   --main-text: #F1B2CE;
@@ -15,6 +16,7 @@
   :root {
     --main-font: 'IBM Plex Mono';
     --background-image: url(../images/cover-image-dark.png);
+    --background-color: #000028;
     --text-in-pink: #000028;
     --pink-background: #FF0070;
     --main-text: #F1B2CE;

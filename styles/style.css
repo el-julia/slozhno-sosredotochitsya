@@ -5,6 +5,7 @@ body>* {
 
 .page {
   background-image: var(--background-image);
+  background-color: var(--background-color, #000028);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +25,7 @@ body>* {
 }
 
 .section:last-of-type {
-  margin-block-end: 30px;
+  margin-block-end: 40px;
 }
 
 /* REC */
@@ -282,27 +283,52 @@ body>* {
 
 /* блок с золотой рыбкой */
 
-
-
-/* блок с картинками */
+/* блок с картинками рабочий не мой
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-.gallery__item {
-  width: 100%;
-  margin: 0;
-  padding-bottom: 5px;
+.gallery-img {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
 }
 
-.gallery__image {
-  inline-size: 100%;
-  block-size: 100%;
-  max-block-size: 100%;
-  object-fit: cover;
+.gallery-img img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+/* блок с картинками рабочий не мой */
+
+.gallery { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 10px; 
+} 
+ 
+.gallery__item { 
+  width: 100%; 
+  margin: 0; 
+  /* padding-bottom: 5px;  */
+}
+.gallery-img {
+  display: grid;
+  gap: 10px;
+}
+
+ 
+.gallery__image { 
+  display: block;
+  inline-size: 100%; 
+  block-size: 100%; 
+  max-block-size: 100%; 
+  object-fit: cover; 
+} 
 
 
 /* блок с картинками */
@@ -400,6 +426,10 @@ body>* {
     margin-block-start: 60px;
   }
 
+  .section:last-of-type {
+    margin-block-end: 60px;
+  }
+
   .subheading {
     grid-column: 2 / 3;
     grid-row: 1;
@@ -450,20 +480,69 @@ body>* {
 
   /* галерея 768 */
 
+  /*мое
+
   .gallery {
     gap: 20px;
+  }
+
+  .gallery__item {
+    padding-bottom: 0;
+  }
+
+  .gallery__image {
+    inline-size: 100%;
+    block-size: 100%;
+    max-block-size: 100%;
+    object-fit: cover;
   }
 
   .gallery-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
     grid-template-areas:
       "sunset sunset icecream"
       "player books icecream"
       "player street street"
     ;
+    grid-template-rows: 260fr 315fr 428fr;
     gap: 20px;
+  }*/
+
+  
+/* рабочее не мое 
+  .gallery-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+      "sunset sunset icecream"
+      "player books icecream"
+      "player street street"
+    ;
+  }
+  
+  .gallery-img img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  рабочее не мое */
+
+  .gallery { 
+    gap: 20px; 
+  } 
+ 
+  .gallery-img { 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    grid-template-areas: 
+      "sunset sunset icecream" 
+      "player books icecream" 
+      "player street street" 
+    ; 
+    gap: 20px; 
   }
 
   .gallery__item:nth-child(1) {

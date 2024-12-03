@@ -1,6 +1,7 @@
 .page.theme_light {
   --main-font: 'IBM Plex Mono';
   --background-image: url(../images/cover-image-light.png);
+  --background-color: #fff1f7;
   --text-in-pink: #353430;
   --pink-background: #FF8DCB;
   --main-text: #353430;
@@ -15,6 +16,7 @@
   :root {
     --main-font: 'IBM Plex Mono';
     --background-image: url(../images/cover-image-light.png);
+    --background-color: #fff1f7;
     --text-in-pink: #353430;
     --pink-background: #FF8DCB;
     --main-text: #353430;
