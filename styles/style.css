@@ -10,7 +10,7 @@ body>* {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--main-text, #F1B2CE);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   background-color: var(--bg-color, #000028);
   font-size: 18px;
 }
@@ -39,7 +39,7 @@ body>* {
 }
 
 .rec::before {
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
   color: var(--other, #FF0070);
   text-transform: uppercase;
@@ -86,7 +86,8 @@ body>* {
   grid-template-rows: min-content min-content min-content;
   grid-template-columns: 1fr;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
   width: 100%;
   padding: 0;
   max-width: 1440px;
@@ -112,12 +113,6 @@ body>* {
 
 /* header */
 
-button {
-  background: transparent;
-  border-radius: 0;
-  border: 0;
-}
-
 .header__theme-menu-button {
   background-color: transparent;
   font-size: 18px;
@@ -125,8 +120,12 @@ button {
   text-transform: lowercase;
   text-align: center;
   border-bottom: 1px solid transparent;
-  width: 70px;
-  height: 26px;
+  min-width: 70px;
+  min-height: 26px;
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
 }
 
 
@@ -157,7 +156,7 @@ button {
 }
 
 .link {
-  text-shadow: 1px 1px 0 var(--pink-background, #FF0070);
+  text-shadow: 2px 2px 0 var(--pink-background, #FF0070);
   text-decoration: none;
 }
 
@@ -292,14 +291,8 @@ button {
   gap: 10px;
 }
 
-/* .gallery-img {
-  display: grid;
-  gap: 10px;
-} */
-
 .gallery__item {
   width: 100%;
-  overflow: hidden;
   margin: 0;
   padding-bottom: 5px;
 }
@@ -319,7 +312,8 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
   width: 100%;
   max-width: 1440px;
   padding: 0;
@@ -330,7 +324,7 @@ button {
   font-weight: 700;
   line-height: 83%;
   color: var(--title, #DB00FF);
-  text-shadow: 3px 3px 0 var(--shadow-title, #FF0070);
+  text-shadow: 2px 2px 0 var(--shadow-title, #FF0070);
   justify-self: center;
   align-self: center;
 }
@@ -354,11 +348,10 @@ button {
   .header__theme-menu {
     padding-inline-end: 20px;
     padding-block-start: 0px;
-    padding-block-end: 51px;
+    padding-block-end: 53px;
   }
 
   .rec {
-    position: absolute;
     top: 19px;
     right: 30px;
   }
@@ -379,7 +372,8 @@ button {
   }
 
   .heading__title {
-    inline-size: 384px;
+    max-width: 384px;
+    width: 100%;
     padding-inline-end: 20px;
     padding-block-start: 42px;
     align-self: auto;
@@ -395,8 +389,7 @@ button {
   }
 
   .content {
-    grid-column: 2 / 4;
-    padding-inline-start: 5px;
+    grid-column: 2 / 3;
   }
 
   .section {
@@ -407,27 +400,23 @@ button {
     margin-block-start: 60px;
   }
 
-  .heading-pink {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+  .subheading {
+    grid-column: 2 / 3;
+    grid-row: 1;
   }
 
   /* секции 768 */
 
   /* focus 768*/
   .focus {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 2fr;
   }
 
   /* focus 768*/
 
   /* attention 768 */
   .attention {
-    display: grid;
-    grid-template-rows: auto, auto;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
   }
 
   .attention .content {
@@ -449,8 +438,12 @@ button {
   /* fish 768 */
 
   .fish {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 2fr;
+
+    .heading__section {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
   }
 
   /* fish 768 */
@@ -511,9 +504,7 @@ button {
   /* header 1024 */
 
   .header {
-    grid-template-rows: 1fr 1fr 1fr;
     padding-block-start: 20px;
-    gap: 0px;
   }
 
   .header__theme-menu {
@@ -528,18 +519,27 @@ button {
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-block-end: 15px;
+    padding-block-end: 25px;
   }
 
   .heading__title {
-    inline-size: 512px;
+    max-width: 512px;
   }
 
   /* header 1024 */
 
   .content {
     padding-inline-start: 0px;
+    grid-column: 2 / 4;
+  }
+
+  .subheading {
+    grid-column: 2 / 4;
+  }
+
+  .focus,
+  .fish {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .attention .content {
@@ -552,11 +552,6 @@ button {
   .attention__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column: 1 / -1;
     gap: 20px;
-  }
-
-  .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }

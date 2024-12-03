@@ -11,19 +11,6 @@
   --rec-display: none;
 }
 
-:root.theme-light {
-  --main-font: 'IBM Plex Mono';
-  --background-image: url(../images/cover-image-light.png);
-  --text-in-pink: #353430;
-  --pink-background: #FF8DCB;
-  --main-text: #353430;
-  --other: #353430;
-  --title: #FFC2E6;
-  --shadow-title: #FF0070;
-  --hover: rgba(50, 49, 45, 0.4);
-  --rec-display: none;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --main-font: 'IBM Plex Mono';
